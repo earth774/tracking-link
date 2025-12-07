@@ -1,8 +1,14 @@
 {
   "name": "@amiearth/tracking-link",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Helper utilities for generating outbound tracking URLs for supported carriers.",
-  "keywords": ["tracking", "link", "dhl", "fedex", "ups"],
+  "keywords": [
+    "tracking",
+    "link",
+    "dhl",
+    "fedex",
+    "ups"
+  ],
   "author": "Amiearth <amiearth@gmail.com>",
   "license": "MIT",
   "type": "module",
