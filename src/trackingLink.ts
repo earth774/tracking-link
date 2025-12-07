@@ -1,0 +1,21 @@
+import { buildDhlLink } from './providers/dhl';
+import { buildFedexLink } from './providers/fedex';
+import { buildUpsLink } from './providers/ups';
+import { TrackingRequest } from './types';
+
+export function buildTrackingLink(req: TrackingRequest): string {
+  switch (req.carrier) {
+    case 'dhl':
+      return buildDhlLink(req);
+    case 'fedex':
+      return buildFedexLink(req);
+    case 'ups':
+      return buildUpsLink(req);
+    default: {
+      // Exhaustiveness guard; TypeScript should prevent reaching here
+      const unreachable: never = req.carrier;
+      throw new Error(`Unsupported carrier: ${String(unreachable)}`);
+    }
+  }
+}
+
