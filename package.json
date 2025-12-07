@@ -1,10 +1,22 @@
 {
-  "name": "tracking-link",
+  "name": "@amiearth/tracking-link",
   "version": "0.1.2",
+  "description": "Helper utilities for generating outbound tracking URLs for supported carriers.",
+  "keywords": ["tracking", "link", "dhl", "fedex", "ups"],
+  "author": "Amiearth <amiearth@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amiearth/tracking-link.git"
+  },
+  "homepage": "https://github.com/amiearth/tracking-link",
+  "bugs": {
+    "url": "https://github.com/amiearth/tracking-link/issues"
+  },
   "files": [
     "dist"
   ],
