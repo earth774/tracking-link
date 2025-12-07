@@ -1,4 +1,4 @@
-import { TrackingRequest } from '../types';
+import { TrackingRequest } from '../types.js';
 
 const DHL_BASE = 'https://www.dhl.com/th-en/home/tracking.html';
 

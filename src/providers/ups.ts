@@ -1,4 +1,4 @@
-import { TrackingRequest } from '../types';
+import { TrackingRequest } from '../types.js';
 
 const UPS_BASE = 'https://www.ups.com/track';
 

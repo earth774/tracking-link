@@ -1,7 +1,7 @@
-import { buildDhlLink } from './providers/dhl';
-import { buildFedexLink } from './providers/fedex';
-import { buildUpsLink } from './providers/ups';
-import { TrackingRequest } from './types';
+import { buildDhlLink } from './providers/dhl.js';
+import { buildFedexLink } from './providers/fedex.js';
+import { buildUpsLink } from './providers/ups.js';
+import { TrackingRequest } from './types.js';
 
 export function buildTrackingLink(req: TrackingRequest): string {
   switch (req.carrier) {

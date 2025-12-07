@@ -1,6 +1,6 @@
-export * from './types';
-export { buildTrackingLink } from './trackingLink';
-export { buildDhlLink } from './providers/dhl';
-export { buildFedexLink } from './providers/fedex';
-export { buildUpsLink } from './providers/ups';
+export * from './types.js';
+export { buildTrackingLink } from './trackingLink.js';
+export { buildDhlLink } from './providers/dhl.js';
+export { buildFedexLink } from './providers/fedex.js';
+export { buildUpsLink } from './providers/ups.js';
 

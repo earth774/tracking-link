@@ -1,4 +1,4 @@
-import { TrackingRequest } from '../types';
+import { TrackingRequest } from '../types.js';
 
 const FEDEX_BASE = 'https://www.fedex.com/fedextrack';
 
