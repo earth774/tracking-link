@@ -11,15 +11,14 @@ export default [
     settings: {
       'import/resolver': {
         typescript: true,
-        node: { extensions: ['.js', '.ts'] }
-      }
+        node: { extensions: ['.js', '.ts'] },
+      },
     },
     rules: {
       'import/order': [
         'error',
-        { alphabetize: { order: 'asc', caseInsensitive: true } }
-      ]
-    }
-  }
+        { alphabetize: { order: 'asc', caseInsensitive: true } },
+      ],
+    },
+  },
 ];
-

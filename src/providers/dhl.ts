@@ -13,4 +13,3 @@ export function buildDhlLink(req: TrackingRequest): string {
 
   return `${DHL_BASE}?${params.toString()}`;
 }
-

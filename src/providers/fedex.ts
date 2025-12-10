@@ -13,4 +13,3 @@ export function buildFedexLink(req: TrackingRequest): string {
 
   return `${FEDEX_BASE}?${params.toString()}`;
 }
-

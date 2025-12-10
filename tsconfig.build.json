@@ -3,4 +3,3 @@
   "include": ["src"],
   "exclude": ["tests", "dist", "coverage"]
 }
-

@@ -13,4 +13,3 @@ export function buildUpsLink(req: TrackingRequest): string {
 
   return `${UPS_BASE}?${params.toString()}`;
 }
-

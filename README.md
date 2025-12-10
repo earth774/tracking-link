@@ -14,12 +14,12 @@ npm install tracking-link
 import { buildTrackingLink } from 'tracking-link';
 
 const url = buildTrackingLink({
-  carrier: 'dhl',
-  orderId: '1234567890',
-  extra: { locale: 'th', source: 'app' }
+  carrier: 'th-post',
+  orderId: 'TH1234567890',
+  extra: { locale: 'th' },
 });
 
-// https://www.dhl.com/th-en/home/tracking.html?tracking-id=1234567890&locale=th&source=app
+// https://track.thailandpost.co.th/?trackNumber=TH1234567890&locale=th
 ```
 
 ### Direct builder imports
@@ -27,34 +27,48 @@ const url = buildTrackingLink({
 If you prefer calling a provider directly:
 
 ```ts
-import { buildDhlLink, buildFedexLink, buildUpsLink } from 'tracking-link';
+import {
+  buildBestLink,
+  buildDhlLink,
+  buildDhlEcomLink,
+  buildFedexLink,
+  buildFlashLink,
+  buildGrabLink,
+  buildJtexLink,
+  buildKerryLink,
+  buildNimLink,
+  buildScgLink,
+  buildTntLink,
+  buildThailandPostLink,
+  buildUpsLink,
+} from 'tracking-link';
 ```
 
 ### Types
 
 `TrackingRequest`:
 
-- `carrier`: one of `'dhl' | 'fedex' | 'ups'`
+- `carrier`: one of `'best' | 'dhl' | 'dhl-ecom' | 'fedex' | 'flash' | 'grab' | 'jtex' | 'kerry' | 'nim' | 'scg' | 'tnt' | 'ups' | 'th-post'`
 - `orderId`: tracking number or reference to embed in the URL
 - `extra?`: optional record of extra query parameters (string or number values)
 
 ## Providers
 
-| Provider          | Carrier key | Status     |
-| ----------------- | ----------- | ---------- |
-| DHL               | `dhl`       | Supported  |
-| FedEx             | `fedex`     | Supported  |
-| UPS               | `ups`       | Supported  |
-| Thailand Post     | `th-post`   | Waiting    |
-| DHL eCommerce     | `dhl-ecom`  | Waiting    |
-| Flash Express     | `flash`     | Waiting    |
-| J&T Express       | `jtex`      | Waiting    |
-| Kerry Express     | `kerry`     | Waiting    |
-| Grab Express      | `grab`      | Waiting    |
-| SCG EXPRESS       | `scg`       | Waiting    |
-| Nim Express       | `nim`       | Waiting    |
-| TNT               | `tnt`       | Waiting    |
-| Best Express      | `best`      | Waiting    |
+| Provider      | Carrier key | Status    |
+| ------------- | ----------- | --------- |
+| DHL           | `dhl`       | Supported |
+| DHL eCommerce | `dhl-ecom`  | Supported |
+| FedEx         | `fedex`     | Supported |
+| Flash Express | `flash`     | Supported |
+| Grab Express  | `grab`      | Supported |
+| J&T Express   | `jtex`      | Supported |
+| Kerry Express | `kerry`     | Supported |
+| SCG EXPRESS   | `scg`       | Supported |
+| TNT           | `tnt`       | Supported |
+| Nim Express   | `nim`       | Supported |
+| UPS           | `ups`       | Supported |
+| Thailand Post | `th-post`   | Supported |
+| Best Express  | `best`      | Supported |
 
 ## Scripts
 
@@ -66,5 +80,3 @@ import { buildDhlLink, buildFedexLink, buildUpsLink } from 'tracking-link';
 ## Contributing
 
 Pull requests for new carriers are welcome. Add a new builder under `src/providers/`, update `Carrier` and `buildTrackingLink`, and cover the behavior with tests under `tests/`.
-
-
