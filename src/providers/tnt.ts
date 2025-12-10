@@ -1,6 +1,7 @@
 import { TrackingRequest } from '../types.js';
 
-const TNT_BASE = 'https://www.tnt.com/express/en_th/site/shipping-tools/tracking.html';
+const TNT_BASE =
+  'https://www.tnt.com/express/en_th/site/shipping-tools/tracking.html';
 
 export function buildTntLink(req: TrackingRequest): string {
   const params = new URLSearchParams({ searchType: 'CON', cons: req.orderId });
