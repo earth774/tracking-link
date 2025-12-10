@@ -1,6 +1,6 @@
 {
   "name": "@amiearth/tracking-link",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Helper utilities for generating outbound tracking URLs for supported carriers.",
   "keywords": [
     "tracking",
